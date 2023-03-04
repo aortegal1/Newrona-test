@@ -47,7 +47,7 @@ p{
   justify-content: center;
   align-items: center;
   background-image: url(../public/pexels-olga-lioncat-7245366.jpg);
-  background-size: contain;
+  background-size: cover;
 }
 
 .formularioLogin{

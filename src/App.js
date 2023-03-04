@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useEffect} from 'react';
+import Dashboard from './Dashboard';
+import Login from './Login';
+import {getAuth , onAuthStateChanged } from 'firebase/auth';
 
 function App() {
+  const auth = getAuth();
+  const [usuario, setUsuario] = React.useState(null);
+  useEffect(()=>{
+    onAuthStateChanged(auth,(usuarioFB)=>{
+      console.log("sesion ya iniciada con", usuarioFB);
+      setUsuario(usuarioFB);
+    })
+  },[]);
+  console.log("hola",usuario);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>       
+        {usuario ? <Dashboard/> : <Login setUsuario={setUsuario}/>}
+      </>
     </div>
   );
 }
