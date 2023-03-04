@@ -23,17 +23,18 @@ const Login = (props) => {
         <div>
             <div className="formulario">
                 <h1>Bienvenido de nuevo!</h1>
-                <h2 style={{opacity:0.7}}>Ingrese sus datos de login</h2><br />
+                <h2 style={{ opacity: 0.7 }}>Ingrese sus datos de login</h2><br />
                 <form className="formularioLogin" onSubmit={submitHandler}>
                     <label htmlFor="login">Correo Electrónico</label>
                     <input type="email" id="campoEmail" />
-                    <label htmlFor="login" style={{marginTop: 35}}>Contraseña</label>
+                    <label htmlFor="login" style={{ marginTop: 35 }}>Contraseña</label>
                     <input type="password" id="campoPassword" />
-                    <button type="submit" > Iniciar sesión </button>
+                    <button className="buttonlog" type="submit" > Iniciar sesión </button>
                 </form>
             </div>
             <div className="imagen">
-                <h1>IMAGEN</h1>
+                    <h1 style={{ color: "white" }}>CEO Managment Tool</h1>
+                    <h3 style={{ textAlign: "center", color: "white" }}><b>"</b>Soluciones prácticas a <br />problemas comunes para los CEO<b>"</b></h3>
             </div>
         </div>
     )

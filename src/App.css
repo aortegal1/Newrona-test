@@ -17,6 +17,12 @@ h2{
   font-size: 16px;
 }
 
+h3{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
 p{
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -46,9 +52,11 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../public/pexels-olga-lioncat-7245366.jpg);
+  background-image: url(../public/pexels-olga-lioncat-7245366.jpg) , linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
   background-size: cover;
+  background-blend-mode: overlay;
 }
+
 
 .formularioLogin{
   text-align:center;
@@ -78,7 +86,7 @@ label{
   margin-bottom: 15px;  
 }
 
-button{
+.buttonlog{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   margin-top:50px;
@@ -92,9 +100,10 @@ button{
   transition: 0.5s all ease;
 }
 
-button:hover{
+.buttonlog:hover{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   background-color: white;
   color: black;
 }
+
